@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment & Scheduling Module</title>
+    <link rel="stylesheet" href="appoint.css">
+  </head>
+  <body>
+    <div class="appointment-container">
+      <header class="header">
+        <h1>📅 Appointment & Scheduling Module</h1>
+        <p>Schedule appointments, check availability, and send reminders</p>
+      </header>
+
+      <div class="main-content">
+        <!-- Input Section -->
+        <div class="input-section">
+          <h2>📋 Schedule New Appointment</h2>
+          <form class="appointment-form">
+            <div class="form-group">
+              <label for="patient-id">Patient ID</label>
+              <input type="text" id="patient-id" placeholder="Enter Patient ID">
+            </div>
+
+            <div class="form-group">
+              <label for="doctor-id">Doctor</label>
+              <select id="doctor-id">
+                <option value="">Select Doctor</option>
+                <option value="DR001">Dr. Smith - Cardiology</option>
+                <option value="DR002">Dr. Johnson - Orthopedics</option>
+                <option value="DR003">Dr. Williams - Pediatrics</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointment-date">Date</label>
+                <input type="date" id="appointment-date">
+              </div>
+              <div class="form-group">
+                <label for="appointment-time">Time</label>
+                <input type="time" id="appointment-time">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reason">Reason for Visit</label>
+              <textarea id="reason" rows="3" placeholder="Describe the reason for the appointment"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Button Section -->
+        <div class="button-section">
+          <button class="btn btn-primary">
+            ✅ Schedule Appointment
+          </button>
+          <button class="btn btn-secondary">
+            🔍 Check Availability
+          </button>
+          <button class="btn btn-accent">
+            📤 Send Reminder
+          </button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+          <h3>📊 Status & Information</h3>
+          
+          <div class="status-card">
+            <div class="status-item">
+              <span class="status-label">Availability Status:</span>
+              <span class="status-value">Doctor Available</span>
+            </div>
+            
+            <div class="status-item">
+              <span class="status-label">Confirmation:</span>
+              <span class="status-value">Ready to schedule appointment</span>
+            </div>
+            
+            <div class="status-item">
+              <span class="status-label">Reminder Status:</span>
+              <span class="status-value">No reminders sent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
